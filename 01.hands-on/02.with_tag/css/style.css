@@ -560,17 +560,23 @@ body {
 }
 
 .boards-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  margin-top: 20px;
 }
 
 /* 768px以上の場合のスタイル */
 @media (width > 767px) {
   .boards-list {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
 /* 1024px以上の場合のスタイル */
 @media (width > 1023px) {
   .boards-list {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
@@ -578,33 +584,80 @@ body {
 }
 
 .board-link {
+  display: block;
+  border-radius: 6px;
+  bottom: 1px solid rgb(241, 242, 246);
+  overflow: hidden;
+  border: 1px solid #f1f2f6;
+}
+
+.board-link:hover{
+  border-color: #fc7401;
 }
 
 .board-thumbnail {
+  object-fit: cover;
+  aspect-ratio: 16/9;
+  width: 100%;
 }
 
 .board-body {
+  padding: 10px;
 }
 
 .board-title {
+  font-size: 14px;
+  border-bottom: 1px solid #f1f2f6;
+  padding-bottom: 10px;
 }
 
 .board-date {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-top: 10px;
+  font-size: 12px;
 }
 
 .board-spot {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-top: 10px;
+  font-size: 12px;
 }
 
 .board-bottom {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 10px;
+  align-items: flex-start;
 }
 
 .board-category {
+  background-color: #333;
+  color: #fff;
+  font-size: 12px;
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 4px;
 }
 
 .board-tags {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 4px;
 }
 
 .board-tag {
+  display: inline;
+  font-size: 12px;
+  background-color: #fc7401;
+  padding: 2px 8px;
+  border-radius: 12px;
+  color: #fff;
 }
 
 /* footer */
